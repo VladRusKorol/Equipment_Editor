@@ -1,4 +1,12 @@
+using Equipment_Editor.Models;
+using Equipment_Editor.Repository;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<EquipmentContext>();
+builder.Services.AddScoped<IRepositoryBase<Equipment_Type>, EquipmentTypeRepository>();
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

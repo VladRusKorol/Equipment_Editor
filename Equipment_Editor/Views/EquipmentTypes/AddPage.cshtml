@@ -1,0 +1,21 @@
+﻿@using Equipment_Editor.DTO.EquipmentTypes
+@model CreateEquipmentTypeDTO
+
+<form method="post" class="add-type-form">
+
+    <div class="add-type-form-type-name">
+        <label>Название типа оборудования: </label>
+        <input asp-for="Name" placeholder="Введите название" class="add-type-form-type-name-input">
+    </div>
+
+    <div class="add-type-form-type-checkbox">
+        <label>Включить: </label>
+        <input type="checkbox" asp-for="IsActive" checked="false" class="add-type-form-type-checkbox-input">
+    </div>
+
+    <input type="submit" value="Добавить" class="addBtn" asp-action="Create" asp-controller="EquipmentTypes" />
+    <a asp-controller="EquipmentTypes" asp-action="ClosePage" class="aCloseBtn">
+        Выйти
+    </a>
+
+</form>

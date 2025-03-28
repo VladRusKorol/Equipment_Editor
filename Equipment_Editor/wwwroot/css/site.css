@@ -1,3 +1,15 @@
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
 html {
   font-size: 14px;
 }
@@ -29,3 +41,177 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+
+.div-with-empty-msg{
+/*    border: 2px solid black;*/
+    margin: 25px;
+    text-align: center;
+    vertical-align: middle;
+    font-family: Candara, sans-serif;
+    font-size:25px;
+    font-weight:800;
+}
+
+
+.addBtn {
+/*    width: 150px;*/
+    font-family: Candara, sans-serif;
+    font-weight: 600;
+    background-color: transparent;
+    border-radius: 52px;
+    border-color: darkolivegreen;
+    transition: 0.25s;
+}
+.addBtn:hover {
+    background-color: lightgreen;
+}
+.addBtn:active {
+    background-color: green;
+}
+
+.aAddBtn {
+/*    border: 2px solid black;*/
+    border-radius: 10px;
+    padding:5px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    font-family: Candara, sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    transition: 0.5s;
+}
+
+.aAddBtn:hover {
+    color: green;
+    font-size: 30px;
+}
+
+
+.aCloseBtn {
+    border: 2px solid black;
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    font-family: Candara, sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    transition: 0.5s;
+}
+
+    .aCloseBtn:hover {
+        background-color: red;
+    }
+
+
+.add-type-form, .edit-type-form {
+    /*    border: 2px solid black;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 10px;
+    font-family: Candara, sans-serif;
+    font-size: 20px;
+}
+
+.add-type-form-type-name, .edit-type-form-type-name {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    align-content: baseline
+}
+
+.add-type-form-type-name-input, .edit-type-form-type-name-input {
+    width: 50%;
+}
+
+.add-type-form-type-checkbox, .edit-type-form-type-checkbox {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    align-content: baseline
+}
+.add-type-form-type-checkbox-input, .add-type-form-type-checkbox-input {
+}
+
+
+
+
+table {
+    border: 1px solid black;
+    table-layout: fixed;
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px 5px rgba(48, 48, 48, 0.5);
+}
+
+    table th {
+        font-weight: bold;
+        padding: 5px;
+        background: lightgrey;
+        border: 1px solid black;
+        text-align: center;
+    }
+
+    table td {
+        padding: 5px 10px;
+        border: 1px solid black;
+        text-align: center;
+    }
+    table tr.green > td {
+        border: 1px solid black;
+        background: lightgreen;
+        font-weight: 700;
+    }
+    table tr.grey > td {
+        border: 1px solid black;
+        background: #efefef;
+    }
+
+.table-col-action{
+/*    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    gap: 0px 5px;
+    border:0px;*/
+}
+.aDelBtn {
+    border-radius: 10px;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    font-family: Candara, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.aDelBtn:hover {
+    color: darkred;
+    font-size: 20px;
+}
+
+.aEditBtn {
+    border-radius: 10px;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    font-family: Candara, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+    .aEditBtn:hover {
+        color: goldenrod;
+        font-size: 20px;
+    }
