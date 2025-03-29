@@ -1,4 +1,4 @@
-# Equipment_Editor / Редакторк учет ремонта оборудования
+# Equipment_Editor / Редактор учет ремонта оборудования
 
 Educational web project to gain practical knowledge of the C# programming language, technology ASP.NET MVC, the implementation of the MVC pattern, working with the database through ORM EntityFramework (in this case SQLite). The application is a system for introducing equipment repair accounting with the possibility of CRUD with equipment reference books.
 
