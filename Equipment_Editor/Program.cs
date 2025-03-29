@@ -6,6 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<EquipmentContext>();
 builder.Services.AddScoped<IRepositoryBase<Equipment_Type>, EquipmentTypeRepository>();
+builder.Services.AddScoped<IRepositoryBase<Equipment_Model>, EquipmentModelRepository>();
+builder.Services.AddScoped<IRepositoryBase<Equipment_Repair>, EquipmentRepairRepository>();
 
 
 // Add services to the container.

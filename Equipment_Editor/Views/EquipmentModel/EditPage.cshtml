@@ -1,0 +1,25 @@
+﻿@using Equipment_Editor.DTO.EquipmentModel
+@model Equipment_Model
+
+<form method="post" class="edit-type-form">
+
+    <div class="edit-type-form-type-name">
+        <label>Название типа оборудования: </label>
+        <input asp-for="Name" placeholder="Введите название" class="edit-type-form-type-name-input">
+    </div>
+
+    <div class="edit-type-form-type-checkbox">
+        <label>Включить: </label>
+        <input type="checkbox" asp-for="IsActive" class="edit-type-form-type-checkbox-input">
+    </div>
+
+    <input type="submit" value="Править" class="addBtn" asp-action="Edit" asp-controller="EquipmentModel" />
+    <a asp-controller="EquipmentModel" asp-action="ClosePage" class="aCloseBtn">
+        Выйти
+    </a>
+
+    <div class="edit-type-form-type-name visually-hidden">
+        <input asp-for="Id" placeholder="Введите название" class="edit-type-form-type-name-input">
+    </div>
+
+</form>

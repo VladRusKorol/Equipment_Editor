@@ -1,6 +1,7 @@
 ﻿using Equipment_Editor.DTO.EquipmentTypes;
 using Equipment_Editor.Models;
 using Equipment_Editor.Repository;
+using Equipment_Editor.Tools;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Equipment_Editor.Controllers
@@ -28,19 +29,13 @@ namespace Equipment_Editor.Controllers
         public async Task<IActionResult> Create([Bind($"{nameof(CreateEquipmentTypeDTO.Name)},{nameof(CreateEquipmentTypeDTO.IsActive)}")] CreateEquipmentTypeDTO createEntity)
         {
             await _repository.CreateAsync(new Equipment_Type() { Name = createEntity.Name, IsActive = createEntity.IsActive });
-            var titleEquipmentTypesController = nameof(EquipmentTypesController);
-            var startIndexController = titleEquipmentTypesController.IndexOf(nameof(Controller));
-            var titleArtist = titleEquipmentTypesController[..startIndexController];
-            return RedirectToAction(nameof(Index), titleArtist);
+            return RedirectToAction(nameof(Index), NameOfTools.NameOfController(nameof(EquipmentTypesController)));
         }
 
         [HttpGet]
         public IActionResult ClosePage()
         {
-            var titleEquipmentTypesController = nameof(EquipmentTypesController);
-            var startIndexController = titleEquipmentTypesController.IndexOf(nameof(Controller));
-            var titleArtist = titleEquipmentTypesController[..startIndexController];
-            return RedirectToAction(nameof(Index), titleArtist);
+            return RedirectToAction(nameof(Index), NameOfTools.NameOfController(nameof(EquipmentTypesController)));
         }
 
 
@@ -48,10 +43,7 @@ namespace Equipment_Editor.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             int result = await _repository.DeleteAsync(id);
-            var titleEquipmentTypesController = nameof(EquipmentTypesController);
-            var startIndexController = titleEquipmentTypesController.IndexOf(nameof(Controller));
-            var titleArtist = titleEquipmentTypesController[..startIndexController];
-            return RedirectToAction(nameof(Index), titleArtist);
+            return RedirectToAction(nameof(Index), NameOfTools.NameOfController(nameof(EquipmentTypesController)));
         }
 
         [HttpGet]
@@ -65,10 +57,7 @@ namespace Equipment_Editor.Controllers
         public async Task<IActionResult> Edit([Bind($"{nameof(Equipment_Type.Id)},{nameof(Equipment_Type.Name)},{nameof(Equipment_Type.IsActive)}")] Equipment_Type editEntity)
         {
             await _repository.UpdateAsync(editEntity);
-            var titleEquipmentTypesController = nameof(EquipmentTypesController);
-            var startIndexController = titleEquipmentTypesController.IndexOf(nameof(Controller));
-            var titleArtist = titleEquipmentTypesController[..startIndexController];
-            return RedirectToAction(nameof(Index), titleArtist);
+            return RedirectToAction(nameof(Index), NameOfTools.NameOfController(nameof(EquipmentTypesController)));
         }
     }
 }
