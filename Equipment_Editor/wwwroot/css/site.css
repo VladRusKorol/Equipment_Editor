@@ -1,4 +1,6 @@
 
+@import 'equip_styles';
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -215,3 +217,23 @@ table {
         color: goldenrod;
         font-size: 20px;
     }
+
+
+.add-eq-form {
+    display: flex;
+    flex-direction:column;
+    gap:15px;
+/*    border: 2px solid black;*/
+}
+.add-eq-form-type-name, .add-eq-form-eq-inv-number, .add-eq-form-eq-type-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.add-eq-form-eq-name-input, .add-eq-form-eq-inv-number-input, .add-eq-form-eq-type-name-input {
+    width: 75%;
+}
+.add-eq-form-eq-name-label, .add-eq-form-eq-inv-number-label, .add-eq-form-eq-type-name-label {
+    width: 25%;
+}

@@ -10,7 +10,6 @@ namespace Equipment_Editor.Controllers
     {
         private readonly EquipmentTypeRepository _repository = (EquipmentTypeRepository)repository;
         
-        
         [HttpGet]
         public async Task<IActionResult> Index()
         {

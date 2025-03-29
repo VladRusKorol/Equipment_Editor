@@ -1,0 +1,21 @@
+﻿@using Equipment_Editor.DTO.EquipmentRepair
+@model CreateEquipmentRepairDTO
+
+<form method="post" class="add-type-form">
+
+    <div class="add-type-form-type-name">
+        <label>Название ремонта: </label>
+        <input asp-for="Description" placeholder="Введите название ремонта" class="add-type-form-type-name-input">
+    </div>
+
+    <div class="add-type-form-type-checkbox">
+        <label>Включить: </label>
+        <input type="checkbox" asp-for="IsActive" checked="false" class="add-type-form-type-checkbox-input">
+    </div>
+
+    <input type="submit" value="Добавить" class="addBtn" asp-action="Create" asp-controller="EquipmentRepair" />
+    <a asp-controller="EquipmentRepair" asp-action="ClosePage" class="aCloseBtn">
+        Выйти
+    </a>
+
+</form>

@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<EquipmentContext>();
+builder.Services.AddScoped<IRepositoryBase<Equipment>, EquipmentRepository>();
 builder.Services.AddScoped<IRepositoryBase<Equipment_Type>, EquipmentTypeRepository>();
 builder.Services.AddScoped<IRepositoryBase<Equipment_Model>, EquipmentModelRepository>();
 builder.Services.AddScoped<IRepositoryBase<Equipment_Repair>, EquipmentRepairRepository>();

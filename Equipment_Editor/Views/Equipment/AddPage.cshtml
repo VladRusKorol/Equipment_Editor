@@ -1,0 +1,42 @@
+﻿@using Equipment_Editor.DTO.Equipment
+@model CreateEquipmentDTO
+
+<form method="post" class="add-eq-form">
+
+    <div class="add-eq-form-type-name">
+        <label class="add-eq-form-eq-name-label">Название единицы оборудования: </label>
+        <input asp-for="Equipment.Name" placeholder="Введите название" class="add-eq-form-eq-name-input">
+    </div>
+
+    <div class="add-eq-form-eq-inv-number">
+        <label class="add-eq-form-eq-inv-number-label">Инвентарный номер оборудования: </label>
+        <input asp-for="Equipment.InvNumber" placeholder="Введите инвентарный номер" class="add-eq-form-eq-inv-number-input">
+    </div>
+
+    <div class="add-eq-form-eq-type-name">
+        <label class="add-eq-form-eq-type-name-label">Тип: </label>
+        <select asp-for="Equipment.TypeName" asp-items="Model.Types" class="add-eq-form-eq-type-name-input"></select>
+    </div>
+
+    <div class="add-eq-form-eq-type-name">
+        <label class="add-eq-form-eq-type-name-label">Модель: </label>
+        <select asp-for="Equipment.ModelName" asp-items="Model.Models" class="add-eq-form-eq-type-name-input"></select>
+    </div>
+
+    <div class="add-type-form-type-checkbox">
+        <label>Включить: </label>
+        <input type="checkbox" asp-for="Equipment.IsActive" checked="false" class="add-type-form-type-checkbox-input">
+    </div>
+
+    <div class="add-eq-form-eq-type-name">
+        <label class="add-eq-form-eq-type-name-label">Дата ввода в систему: </label>
+        <input type="date" asp-for="Equipment.EntryDate" class="add-eq-form-eq-type-name-input">
+    </div>
+
+    <input type="submit" value="Добавить" class="addBtn" asp-action="Create" asp-controller="Equipment" />
+
+    <a asp-controller="EquipmentModel" asp-action="ClosePage" class="aCloseBtn">
+        Выйти
+    </a>
+
+</form>
